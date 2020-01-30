@@ -1,0 +1,11 @@
+
+from pathlib import Path
+
+db_process = Path('/home/mana/Downloads/Check_DB_running.txt').read_text().splitlines()
+validate_db = '>>> All processes are running and the database is opened to the users!'
+check = [i for i in my_list if i in db_process]
+
+if validate_db in check:
+    print('Check_db running.')
+else:
+    print('Check_db not running.')
